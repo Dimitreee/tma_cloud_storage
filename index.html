@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Untitled</title>
+    <meta name="description" content="This is an example of a meta description.">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+    <script>eruda.init();</script>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<p>Cloud storage request sent:
+    <b>
+        <span id="req">
+            false
+        </span>
+    </b>
+</p>
+<p>Cloud storage response received:
+    <b>
+        <span id="res">
+            false
+        </span>
+    </b>
+</p>
+
+<p>Ping:
+    <b>
+        <span id="ping">
+            0 ms
+        </span>
+    </b>
+</p>
+
+<button>
+    send storage request
+</button>
+
+<br/>
+<br/>
+<script>
+    const platform = document.createElement('span');
+    platform.innerText  = 'Current platform: ' + window.Telegram.WebApp.platform;
+
+    document.body.appendChild(platform)
+</script>
+<script>
+    document.querySelector('button').addEventListener('click', () => {
+        const req = document.getElementById('req');
+        const res = document.getElementById('res');
+        const ping = document.getElementById('ping');
+
+        req.innerText = 'true';
+        res.innerText = 'false';
+        ping.innerText = '0 ms';
+
+        const start = Date.now();
+
+        window.Telegram.WebApp.CloudStorage.getKeys(function (response, err) {
+            res.innerText = 'true';
+            ping.innerText = Date.now() - start + ' ms';
+        });
+    });
+</script>
+</body>
+</html>
