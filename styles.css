@@ -1,0 +1,86 @@
+
+:root {
+    --bg_color: #FFFFFF;
+    --text_color: #222222;
+    --hint_color: #8A8F93;
+    --link_color: #0287d9;
+    --button_text_color: #FFFFFF;
+    --button_color: #3390EC;
+    --secondary_bg_color: #F1F6F9;
+    --section_bg_color: #FFFFFF;
+    --accent_text_color: #0287d9;
+    --subtitle_text_color: #8A8F93;
+    --destructive_text_color: #CC2929;
+    --header_bg_color: #527DA3;
+    --section_header_text_color: #8A8F93;
+
+    --stroke_separator: #0000001A;
+    --stroke_image_border: #00000014;
+    --button_color_hover: #5EAEED;
+    --secondary_bg_color_hover: #E5Eff5;
+    --hint_color_hover: #909090;
+
+    --color_orange: #F68136;
+    --overlay: #00000066;
+    --bg_modal: #FFFFFF;
+    --bg_header_blur: #FFFFFFE0;
+    --bg_hover_alpha: #1313140A;
+
+    --bg_skeleton: #F1F0F8;
+    --bg_skeleton_gradient: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 52.08%, rgba(255, 255, 255, 0) 100%);
+    --bg_ripple: #000000A3;
+
+    --highlight-default: rgb(142 142 146 / 24%);
+
+    @media (prefers-color-scheme: dark) {
+        --bg_color: #181818;
+        --text_color: #FFFFFF;
+        --hint_color: #AAAAAA;
+        --link_color: #4991E5;
+        --button_text_color: #FFFFFF;
+        --button_color: #4991E5;
+        --secondary_bg_color: #212121;
+        --section_bg_color: #181818;
+        --accent_text_color: #4991E5;
+        --subtitle_text_color: #AAAAAA;
+        --destructive_text_color: #EE686F;
+        --header_bg_color: #232326;
+        --section_header_text_color: #AAAAAA;
+
+        --stroke_separator: #FFFFFF33;
+        --stroke_image_border: #FFFFFF14;
+        --button_color_hover: #64B1EE;
+        --secondary_bg_color_hover: #292929;
+        --hint_color_hover: #999999;
+
+        --color_orange: #FF9500;
+        --overlay: #00000066;
+        --bg_modal: #18181A;
+        --bg_header_blur: #000000E0;
+        --bg_hover_alpha: #E5E5EA14;
+
+        --bg_skeleton: #323234;
+        --bg_skeleton_gradient: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.15) 52.08%, rgba(0, 0, 0, 0) 100%);
+        --bg_ripple: #FFFFFFA3;
+
+        --highlight-default: rgb(255 255 255 / 5%);
+    }
+}
+
+body {
+    background-color: var(--bg_color);
+    color: var(--text_color);
+}
+
+button {
+    color: var(--button_text_color);
+    background-color: var(--button_color);
+    outline: none;
+    padding: 8px 6px;
+    border-radius: 2px;
+    border: none;
+}
+
+button:active {
+    transform: scale(0.98);
+}
